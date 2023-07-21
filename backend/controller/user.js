@@ -35,13 +35,13 @@ router.post("/create-user", async (req, res, next) => {
 
     const activationToken = createActivationToken(user);
 
-    const activationUrl = `http://localhost:3000/activation/${activationToken}`;
+    const activationUrl = `https://aicha-bubd.vercel.app/activation/${activationToken}`;
 
     try {
       await sendMail({
         email: user.email,
         subject: "Activate your account",
-        message: `Hello ${user.name}, please click on the link to activate your account: ${activationUrl}`,
+        message: `Hello ${user.name}, please click on the link to activate your account in archi: ${activationUrl}`,
       });
       res.status(201).json({
         success: true,
