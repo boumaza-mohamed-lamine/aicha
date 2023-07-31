@@ -219,9 +219,9 @@ const Header = ({ activeHeading }) => {
           <div>
             <Link to="/">
               <img
-                src="https://shopo.quomodothemes.website/assets/images/logo.svg"
+                src={logo}
                 alt=""
-                className="mt-3 cursor-pointer"
+                style={{ filter: "brightness(0) invert(1)",width:'100px',height:'100px' ,color:"black" }}
               />
             </Link>
           </div>
